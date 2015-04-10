@@ -1,0 +1,113 @@
+<html>
+<head>
+	<title>Sound mang</title>
+	<script type="text/javascript" src="dist/band.js"> </script>
+</head>
+<body>
+<script type="text/javascript">
+var conductor = new BandJS();
+	conductor.setTimeSignature(4,4);
+	conductor.setTempo(240);
+var soprano = conductor.createInstrument('square', 'oscillators'),
+    alto = conductor.createInstrument('square'),
+    bass = conductor.createInstrument('square'),
+		piano = conductor.createInstrument('square', 'oscillators'),
+		drum = conductor.createInstrument('white', 'noises');
+    drum.setVolume(50);
+
+	for(var i = 0; i < 4; i++) {
+		piano.note('quarter', 'C2');
+		piano.note('quarter', 'D2');
+		piano.note('quarter', 'E2');
+		piano.note('quarter', 'G2');
+
+		piano.note('quarter', 'C3');
+		piano.note('quarter', 'D3');
+		piano.note('quarter', 'E3');
+		piano.note('quarter', 'G3');
+
+		piano.note('quarter', 'C4');
+		piano.note('quarter', 'D4');
+		piano.note('quarter', 'E4');
+		piano.note('quarter', 'G4');
+
+		piano.note('quarter', 'C5');
+		piano.note('quarter', 'D5');
+		piano.note('quarter', 'E5');
+		piano.note('quarter', 'G5');
+		piano.note('quarter', 'C6');
+
+		piano.note('quarter', 'G5');
+		piano.note('quarter', 'E5');
+		piano.note('quarter', 'D5');
+		piano.note('quarter', 'C5');
+
+		piano.note('quarter', 'G4');
+		piano.note('quarter', 'E4');
+		piano.note('quarter', 'D4');
+		piano.note('quarter', 'C4');
+
+		piano.note('quarter', 'G3');
+		piano.note('quarter', 'E3');
+		piano.note('quarter', 'D3');
+		piano.note('quarter', 'C3');
+
+		piano.note('quarter', 'G2');
+		piano.note('quarter', 'E2');
+		piano.note('quarter', 'D2');
+		piano.note('quarter', 'C2');
+
+		piano.note('quarter', 'A1');
+		piano.note('quarter', 'B1');
+		piano.note('quarter', 'C2');
+		piano.note('quarter', 'E2');
+
+		piano.note('quarter', 'A2');
+		piano.note('quarter', 'B2');
+		piano.note('quarter', 'C3');
+		piano.note('quarter', 'E3');
+
+		piano.note('quarter', 'A3');
+		piano.note('quarter', 'B3');
+		piano.note('quarter', 'C4');
+		piano.note('quarter', 'E4');
+
+		piano.note('quarter', 'A4');
+		piano.note('quarter', 'B4');
+		piano.note('quarter', 'C5');
+		piano.note('quarter', 'E5');
+		piano.note('quarter', 'A5');
+
+		piano.note('quarter', 'E5');
+		piano.note('quarter', 'C5');
+		piano.note('quarter', 'B4');
+		piano.note('quarter', 'A4');
+
+		piano.note('quarter', 'E4');
+		piano.note('quarter', 'C4');
+		piano.note('quarter', 'B3');
+		piano.note('quarter', 'A3');
+
+		piano.note('quarter', 'E3');
+		piano.note('quarter', 'C3');
+		piano.note('quarter', 'B2');
+		piano.note('quarter', 'A2');
+
+		piano.note('quarter', 'E2');
+		piano.note('quarter', 'C2');
+		piano.note('quarter', 'B1');
+		piano.note('quarter', 'A1');
+
+	}
+	var player = conductor.finish();
+		var play = function(){
+			player.play();
+		}
+	var stop = function(){
+			player.stop();
+		}
+</script>
+<input id="play" type="button" value="play" onclick="play()"/>
+<input id="stop" type="button" value="stop" onclick="stop()"/>
+</body>
+</html>
